@@ -3057,6 +3057,15 @@ Params: speed                   SPI bus speed (default 4000000)
         int_pin                 GPIO pin for interrupts (default 17)
         reset_pin               GPIO pin for RESET (default 27)
 
+Name:   skuld-buttons-encoders.dts
+Info:   skuld buttons and encoders
+Load:   dtoverlay=skuld-buttons-encoders
+Params: <None>
+
+Name:   skuld-ssd1322.dts
+Info:   skuld oled display
+Load:   dtoverlay=norns-ssd1322
+Params: <None>
 
 Name:   smi
 Info:   Enables the Secondary Memory Interface peripheral. Uses GPIOs 2-25!

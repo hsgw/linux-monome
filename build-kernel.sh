@@ -2,7 +2,7 @@
 
 CONFIGS=()
 PULL_IMAGE=YES
-BUILDER_IMAGE_NAME="ghcr.io/monome/norns-kernel-builder/image"
+BUILDER_IMAGE_NAME="ghcr.io/hsgw/norns-kernel-builder/image"
 BUILDER_IMAGE_TAG="latest"
 
 while [[ $# -gt 0 ]]; do

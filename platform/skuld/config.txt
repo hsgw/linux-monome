@@ -8,32 +8,29 @@ gpu_mem_256=100
 gpu_mem_512=100
 gpu_mem_1024=100
 
-# Display
-# Connected using SPI
+# Optional hardware interface
+dtparam=i2c_arm=on
 dtparam=spi=on
-dtoverlay=ssd1322-spi
+dtparam=i2s=on
+dtoverlay=i2s-mmap
+
+# Display
+dtoverlay=skuld-ssd1322
 dtparam=rotate=180
 
 # Soundcard
-# Connected using I2S
-# CS4270 codec used by soundcard connected using I2C
-dtparam=i2s=on
-dtparam=i2c=on
-dtoverlay=monome-snd-4270
+dtparam=audio=off
+dtoverlay=rpi-proto
+#dtoverlay=monome-snd-4271
 
 # Buttons and encoders
-dtoverlay=norns-buttons-encoders
-dtparam=e1_pin_a=4
-dtparam=e1_pin_b=27
-dtparam=e2_pin_a=12
-dtparam=e2_pin_b=25
-dtparam=e3_pin_a=24
-dtparam=e3_pin_b=23
-dtparam=b1_pin=22
-dtparam=b2_pin=26
-dtparam=b3_pin=13
+dtoverlay=skuld-buttons-encoders
 
 #[rpi4]
 #enable_uart=1
 #uart_2ndstage=1
 #arm_boost=1
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
