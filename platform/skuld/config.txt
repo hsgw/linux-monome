@@ -15,8 +15,7 @@ dtparam=i2s=on
 dtoverlay=i2s-mmap
 
 # Display
-dtoverlay=skuld-ssd1322
-dtparam=rotate=180
+dtoverlay=skuld-ssd1322,rotate=180
 
 # Soundcard
 dtparam=audio=off
@@ -31,6 +30,6 @@ dtoverlay=skuld-buttons-encoders
 #uart_2ndstage=1
 #arm_boost=1
 # Enable DRM VC4 V3D driver on top of the dispmanx display stack
-dtoverlay=vc4-fkms-v3d
+#dtoverlay=vc4-fkms-v3d
 max_framebuffers=2
 
